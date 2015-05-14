@@ -38,9 +38,9 @@ function checkWin() {
 
 	var fullSet = [rowA, rowB, rowC, colA, colB, colC, diagA, diagB];
 
-	fullSet.forEach(function(set) {
-		if (set[0] !== "" && set[1] !== "" && set[2] !== "" && set[0] === set[1] && set[0] === set[2]) {
+	for (var i = 0; i < 8; i++) {
+		if (fullSet[i][0] !== "" && fullSet[i][1] !== "" && fullSet[i][2] !== "" && fullSet[i][0] === fullSet[i][1] && fullSet[i][0] === fullSet[i][2]) {
 			alert(currentTurn + " Wins!");
 		}
-	});
+	}
 }

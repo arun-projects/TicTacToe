@@ -2,7 +2,7 @@
 
 var spaces = document.getElementsByTagName("td");
 
-for (var i = 0; i < spaces.length; i++) {
+//Write the beginning of a FOR loop from 0 to 8 inclusive
 	spaces[i].addEventListener("click", function() {
 		if (this.innerHTML === "") {
 			if (currentTurn === "X") {
@@ -38,9 +38,9 @@ function checkWin() {
 
 	var fullSet = [rowA, rowB, rowC, colA, colB, colC, diagA, diagB];
 
-	fullSet.forEach(function(set) {
-		if (set[0] !== "" && set[1] !== "" && set[2] !== "" && set[0] === set[1] && set[0] === set[2]) {
+	//Write the beginning of a FOR loop from 0 to 7 inclusive
+		if (fullSet[i][0] !== "" && fullSet[i][1] !== "" && fullSet[i][2] !== "" && fullSet[i][0] === fullSet[i][1] && fullSet[i][0] === fullSet[i][2]) {
 			//Create an alert here with the currentTurn + "Wins!". An example may be "X Wins!" or "O Wins!"
 		}
-	});
+	}
 }

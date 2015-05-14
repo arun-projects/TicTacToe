@@ -3,7 +3,6 @@
 //Declare a variable called spaces and set it equal to a selector that targets the "td" tag
 
 //Write the beginning of the FOR loop from 0 to spaces.length
-
 	spaces[i].addEventListener("click", function() {
 		if (this.innerHTML === "") {
 			if (currentTurn === "X") {
@@ -39,9 +38,9 @@ function checkWin() {
 
 	//Declare a variable called fullSet which will be an array of each of the above variables (rowA, rowB, etc.)
 
-	fullSet.forEach(function(set) {
-		if (set[0] !== "" && set[1] !== "" && set[2] !== "" && set[0] === set[1] && set[0] === set[2]) {
+	//Write the beginning of a FOR loop from 0 to 7 inclusive
+		if (fullSet[i][0] !== "" && fullSet[i][1] !== "" && fullSet[i][2] !== "" && fullSet[i][0] === fullSet[i][1] && fullSet[i][0] === fullSet[i][2]) {
 			//Create an alert here with the currentTurn + "Wins!". An example may be "X Wins!" or "O Wins!"
 		}
-	});
+	}
 }
