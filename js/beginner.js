@@ -1,19 +1,24 @@
 //Declare a variable called currentTurn and set it equal to "O"
+var currentTurn = "O";
 
 var spaces = document.getElementsByTagName("td");
 
 //Write the beginning of a FOR loop from 0 to 8 inclusive
+for (var i = 0; i < 9; i++) {
 	spaces[i].addEventListener("click", function() {
 		if (this.innerHTML === "") {
 			if (currentTurn === "X") {
 				//Change currentTurn to "O"
+				currentTurn = "O";
 			} else {
 				//Change currentTurn to "X"
+				currentTurn = "X";
 			}
 
 			this.innerHTML = currentTurn;
 
 			//Call the function checkWin
+			checkWin();
 		} else {
 			return false;
 		}
@@ -39,8 +44,10 @@ function checkWin() {
 	var fullSet = [rowA, rowB, rowC, colA, colB, colC, diagA, diagB];
 
 	//Write the beginning of a FOR loop from 0 to 7 inclusive
+	for (var i = 0; i < 8; i++) {
 		if (fullSet[i][0] !== "" && fullSet[i][1] !== "" && fullSet[i][2] !== "" && fullSet[i][0] === fullSet[i][1] && fullSet[i][0] === fullSet[i][2]) {
 			//Create an alert here with the currentTurn + "Wins!". An example may be "X Wins!" or "O Wins!"
+			alert(currentTurn + " Wins!");
 		}
 	}
 }
